@@ -9,7 +9,7 @@
 class Clima {
     DateTime dateTime;
     BigDecimal precipitationProbability;
-    int Temperatura;
+    int temperature;
 }
 
 public class Prenda(){
@@ -38,7 +38,7 @@ public class Sugerenciador{
 		Pronostico pronostico = new Pronostico()
 		List<Map<String, Object>> condicionesClimaticas = pronostico.obtenerClimaDe("Buenos Aires, Argentina");
 
-		int temperaturaActual = condicionesClimaticas.get(0).get("Temperatura");		
+		int temperaturaActual = condicionesClimaticas.get(0).get("temperature");		
 
 		List<Prenda> prendasSuperiorSugeridas = filtrarPorTemperatura(prendasSuperior, temperaturaActual);
 		List<Prenda> prendasInferiorSugeridas = filtrarPorTemperatura(prendasInferior, temperaturaActual);
